@@ -48,11 +48,34 @@ let nav3 = nav[2];
 let nav4 = nav[3];
 let nav5 = nav[4];
 let nav6 = nav[5];
-console.log(nav2)
-console.log(nav);
+// console.log(nav2)
+// console.log(nav);
 nav1.textContent = 'Services'
 nav2.textContent = 'Product'
 nav3.textContent = 'Vision'
 nav4.textContent = 'Features'
 nav5.textContent = 'About'
 nav6.textContent = 'Contact'
+
+let newCTA = document.querySelector('.cta-text');
+console.log(newCTA);
+let newH1 = newCTA.querySelector('h1');
+console.log(newH1);
+newH1.innerHTML = 'DOM' + '<br />' + 'IS' + '<br />' + 'AWESOME'
+let newButton = newCTA.querySelector('button');
+console.log(newButton);
+newButton.textContent = 'Get Started';
+
+let ctaImage = document.querySelector('#cta-img')
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+let mainContent = document.querySelector('.main-content');
+console.log(mainContent);
+let newTop = mainContent.querySelector('.top-content')
+console.log(newTop);
+let topText = newTop.querySelectorAll('.text-content')
+console.log(topText)
+let features = topText[0].children
+
+console.log(features)
+let about = topText[1].children
