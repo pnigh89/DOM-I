@@ -42,20 +42,41 @@ let logo = document.querySelector("#logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let nav = document.querySelectorAll('nav a');
+
+nav.forEach(nav => nav.style.color = 'green')
+
+console.log(nav)
+
 let nav1 = nav[0];
 let nav2 = nav[1];
 let nav3 = nav[2];
 let nav4 = nav[3];
 let nav5 = nav[4];
 let nav6 = nav[5];
+
+let newNav2 = document.createElement('a')
+newNav2.textContent = 'Start Here'
+newNav2.href = '#'
+document.querySelector('nav').prepend(newNav2)
+
+
+
+let newNav1 = document.createElement('a')
+newNav1.textContent = 'End Here'
+newNav1.href = '#'
+document.querySelector('nav').appendChild(newNav1)
+
+
+// nav.style.color = 'green'
+
 // console.log(nav2)
 // console.log(nav);
-nav1.textContent = 'Services'
-nav2.textContent = 'Product'
-nav3.textContent = 'Vision'
-nav4.textContent = 'Features'
-nav5.textContent = 'About'
-nav6.textContent = 'Contact'
+nav1.textContent = siteContent ['nav'] ['nav-item-1']
+nav2.textContent = siteContent ['nav'] ['nav-item-2']
+nav3.textContent = siteContent ['nav'] ['nav-item-3']
+nav4.textContent = siteContent ['nav'] ['nav-item-4']
+nav5.textContent = siteContent ['nav'] ['nav-item-5']
+nav6.textContent = siteContent ['nav'] ['nav-item-6']
 
 let newCTA = document.querySelector('.cta-text');
 console.log(newCTA);
